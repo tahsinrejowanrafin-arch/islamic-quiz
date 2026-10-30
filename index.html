@@ -16,6 +16,7 @@
 <meta property="og:locale" content="bn_BD">
 <meta name="theme-color" content="#0b5d3b">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@400;500;600;700&family=Noto+Serif+Bengali:wght@600;700&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+Bengali:wght@500;600;700&text=%E0%A7%A6%E0%A7%A7%E0%A7%A8%E0%A7%A9%E0%A7%AA%E0%A7%AB%E0%A7%AC%E0%A7%AD%E0%A7%AE%E0%A7%AF&display=swap">
 <style>
 :root{--bg:#eef4f0;--sf:#fff;--tx:#14261d;--mu:#5b6b62;--g:#0b5d3b;--g2:#0e7a4d;--au:#b98a2e;--ln:#d5e2da;--okb:#e1f4e8;--okc:#1c9a5a;--nob:#fde7e7;--noc:#d64545;color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
 @media(prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#0b1510;--sf:#14241c;--tx:#e8f0ea;--mu:#9fb2a6;--g:#3fbf85;--g2:#2fa774;--au:#d9ab4a;--ln:#27402f;--okb:#12362a;--okc:#3fbf85;--nob:#3a1b1b;--noc:#f07676;color-scheme:dark}}
@@ -23,7 +24,7 @@
 html{scroll-padding-top:env(safe-area-inset-top,0px)}
 *,*::before,*::after{box-sizing:inherit}
 [hidden]{display:none!important}
-body{margin:0;background:var(--bg);color:var(--tx);font:500 17px/1.7 'Hind Siliguri','Noto Sans Bengali','Kalpurush',system-ui,sans-serif}
+body{margin:0;background:var(--bg);color:var(--tx);font:500 17px/1.7 'Noto Sans Bengali','Hind Siliguri','Kalpurush',system-ui,sans-serif}
 button{font:inherit;color:inherit;cursor:pointer}
 button:focus-visible{outline:3px solid var(--au);outline-offset:2px}
 .hero{background:linear-gradient(160deg,#0b5d3b,#083d28);color:#fff;padding:44px 20px 52px;text-align:center;border-bottom:4px solid #c9a24a;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='48' height='48'%3E%3Cg fill='none' stroke='%23d4af5a' stroke-opacity='.22'%3E%3Crect x='10' y='10' width='28' height='28'/%3E%3Crect x='10' y='10' width='28' height='28' transform='rotate(45 24 24)'/%3E%3C/g%3E%3C/svg%3E"),linear-gradient(160deg,#0b5d3b,#083d28)}
@@ -49,7 +50,7 @@ button:focus-visible{outline:3px solid var(--au);outline-offset:2px}
 .timer .t i{display:block;height:100%;width:100%;background:var(--g2);transition:width .25s linear}
 .timer.low .n{border-color:var(--noc);color:var(--noc)}
 .timer.low .t i{background:var(--noc)}
-#stem{font:600 20px/1.7 'Hind Siliguri',sans-serif;white-space:pre-line;margin:0 0 14px}
+#stem{font:600 20px/1.7 'Noto Sans Bengali','Hind Siliguri',sans-serif;white-space:pre-line;margin:0 0 14px}
 .opt{display:flex;gap:12px;align-items:flex-start;width:100%;text-align:left;background:var(--sf);border:2px solid var(--ln);border-radius:12px;padding:12px 14px;margin-bottom:10px;min-height:52px}
 .opt b{flex:none;width:30px;height:30px;border-radius:50%;background:var(--bg);display:grid;place-items:center;color:var(--g);font-size:15px}
 .opt:not(:disabled):hover{border-color:var(--g2)}
@@ -63,7 +64,7 @@ button:focus-visible{outline:3px solid var(--au);outline-offset:2px}
 .fb.no{background:var(--nob);color:var(--noc)}
 .res{text-align:center}
 .ring{--p:0;width:150px;height:150px;border-radius:50%;margin:8px auto 12px;background:conic-gradient(var(--okc) calc(var(--p)*1%),var(--ln) 0);display:grid;place-items:center}
-.ring i{width:116px;height:116px;border-radius:50%;background:var(--sf);display:grid;place-items:center;font:700 30px 'Noto Serif Bengali',serif;color:var(--g)}
+.ring i{width:116px;height:116px;border-radius:50%;background:var(--sf);display:grid;place-items:center;font:700 30px 'Noto Sans Bengali','Noto Serif Bengali',serif;color:var(--g)}
 .grid{display:grid;grid-template-columns:repeat(2,1fr);gap:10px;margin:14px 0;text-align:left}
 .grid div{background:var(--bg);border-radius:12px;padding:10px 14px;font-size:15px;color:var(--mu)}
 .grid b{display:block;font-size:24px;color:var(--tx)}
@@ -99,6 +100,10 @@ body{background:radial-gradient(1200px 500px at 50% -120px,rgba(185,138,46,.16),
 .foot{margin-top:26px;padding-top:16px;border-top:1px solid var(--ln)}
 .foot p{margin:2px 0}
 .foot b{color:var(--g)}
+body.play .hero{padding:14px 20px 18px}
+body.play .hero .emb,body.play .hero .bis,body.play .hero p,body.play .hero .orn,body.play .hero .by{display:none}
+body.play .hero h1{font-size:22px;margin:0}
+body.play .wrap{margin-top:0;padding-top:16px}
 @media(prefers-reduced-motion:reduce){*{transition:none!important;animation:none!important}}
 </style>
 </head>
@@ -168,7 +173,6 @@ const CH2=[
 ["পবিত্র কুরআনে 'ফাতহুম মুবিন' বলা হয়েছে কোনটিকে?",["হুদায়বিয়ার সন্ধিকে","হিলফুল ফুজুলকে","মক্কা বিজয়কে","মদিনা বিজয়কে"],0],
 ["কত হিজরিতে মক্কা বিজয় হয়?",["ষষ্ঠ","সপ্তম","অষ্টম","দশম"],2],
 ["বিদায় হজ কত খ্রিষ্টাব্দে অনুষ্ঠিত হয়?",["৬৩০","৬৩২","৬৩৩","৬৩৪"],1],
-["মহানবি (স) কোথায় বিদায় হজের ভাষণ দেন?",["কাবা চত্বরে","মিনায়","সাফা পর্বতে","আরাফাতে"],3],
 ["মহানবি (স) কত খ্রিষ্টাব্দে মৃত্যুবরণ করেন?",["৬৩০","৬৩২","৬৩৩","৬৩৪"],1],
 ["হিলফুল ফুজুলের উদ্দেশ্য ছিল—\ni. শান্তি-শৃঙ্খলা প্রতিষ্ঠা করা\nii. ইসলাম প্রতিষ্ঠা করা\niii. নিঃস্ব, অসহায় ও দুর্গতদের সেবা করা\nনিচের কোনটি সঠিক?",["i ও ii","i ও iii","ii ও iii","i, ii ও iii"],1],
 ["মক্কা বিজয়ের ফলে—\ni. পৌত্তলিকতার অবসান হয়\nii. একেশ্বরবাদ প্রতিষ্ঠা হয়\niii. মিথ্যার ওপর সত্যের বিজয় হয়\nনিচের কোনটি সঠিক?",["i ও ii","i ও iii","ii ও iii","i, ii ও iii"],3],
@@ -196,7 +200,8 @@ function save(){try{localStorage.setItem(KEY,JSON.stringify(S))}catch(e){}}
 function load(){try{return JSON.parse(localStorage.getItem(KEY))}catch(e){return null}}
 function wipe(){try{localStorage.removeItem(KEY)}catch(e){}}
 function sh(a){a=a.slice();for(let i=a.length-1;i>0;i--){const j=Math.floor(Math.random()*(i+1));[a[i],a[j]]=[a[j],a[i]]}return a}
-function view(id){["home","quiz","result"].forEach(s=>$(s).hidden=s!==id);clearTimeout(tm);window.scrollTo(0,0)}
+let cur=null;
+function view(id){const ch=cur!==id;cur=id;document.body.classList.toggle("play",id!=="home");["home","quiz","result"].forEach(s=>$(s).hidden=s!==id);clearTimeout(tm);if(ch)window.scrollTo(0,0)}
 const QS=()=>CH[S.c].qs;
 
 function home(){
@@ -215,8 +220,8 @@ function home(){
 function start(c){
   const qs=CH[c].qs,sq=$("sq").checked,so=$("so").checked;
   const ord=(sq?sh:a=>a)(qs.map((_,i)=>i));
-  /* i, ii, iii ধরনের অপশন সাজানো থাকে, তাই সেগুলো এলোমেলো করা হয় না */
-  const perm=ord.map(q=>so&&!/^i/.test(qs[q][1][0])?sh([0,1,2,3]):[0,1,2,3]);
+  /* i, ii, iii এবং সংখ্যা/সাল/ক্রম (এক, দুই… ষষ্ঠ, সপ্তম…) ধরনের অপশন সাজানো থাকে, তাই সেগুলো এলোমেলো করা হয় না */
+  const perm=ord.map(q=>so&&!/^(i|[০-৯]|এক|ষষ্ঠ)/.test(qs[q][1][0])?sh([0,1,2,3]):[0,1,2,3]);
   S={c,ord,perm,i:0,ans:ord.map(()=>null),done:false,end:Date.now()+T*1000};
   save();render();
 }
@@ -225,7 +230,7 @@ function render(){
   view("quiz");
   const qs=QS(),n=S.ord.length,q=qs[S.ord[S.i]],p=S.perm[S.i],a=S.ans[S.i],c=p.indexOf(q[2]);
   $("cnt").textContent="প্রশ্ন "+bn(S.i+1)+" / "+bn(n);
-  $("bar").style.width=(S.i/n*100)+"%";
+  $("bar").style.width=((S.i+(a!==null?1:0))/n*100)+"%";
   $("stem").textContent=q[0];
   const box=$("opts");box.innerHTML="";
   p.forEach((o,k)=>{
@@ -254,15 +259,15 @@ function tick(){
   $("sec").textContent=bn(left);
   $("tbar").style.width=Math.max(0,ms/(T*10))+"%";
   $("timer").classList.toggle("low",left<=10);
-  if(ms<=0){S.ans[S.i]=-1;save();render();return}
+  if(ms<=0){S.ans[S.i]=-1;save();render();$("next").scrollIntoView({block:"nearest"});return}
   tm=setTimeout(tick,200);
 }
 
-function pick(k){if(S.ans[S.i]!==null)return;S.ans[S.i]=k;save();render()}
+function pick(k){if(S.ans[S.i]!==null)return;S.ans[S.i]=k;save();render();$("next").scrollIntoView({block:"nearest"})}
 
 function next(){
   if(S.i+1>=S.ord.length){S.done=true;save();result();return}
-  S.i++;S.end=Date.now()+T*1000;save();render();
+  S.i++;S.end=Date.now()+T*1000;save();render();window.scrollTo(0,0);
 }
 
 function result(){
